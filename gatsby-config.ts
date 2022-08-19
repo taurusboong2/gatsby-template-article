@@ -10,7 +10,6 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    'gatsby-plugin-sass',
     'gatsby-plugin-mdx',
     {
       resolve: 'gatsby-source-filesystem',
@@ -21,6 +20,13 @@ const config: GatsbyConfig = {
       __key: 'pages',
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        additionalData: `@import "./src/styles/_variables.scss";`,
+        sassRuleModulesTest: /\.mod\.s(a|c)ss$/,
+      },
+    },
   ],
 };
 

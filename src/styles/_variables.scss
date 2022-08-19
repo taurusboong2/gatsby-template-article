@@ -1,0 +1,36 @@
+$mainColor: #f7f06d;
+$success: #44dd9e;
+$info: #00b3f9;
+$warning: #ffcb11;
+$danger: #ff5728;
+
+@mixin mw1256 {
+  @media (max-width: 1256px) {
+    @content;
+  }
+}
+
+@mixin mw1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mw768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mw375 {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin detailTexts {
+  max-width: 1195px;
+  padding: 0 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}

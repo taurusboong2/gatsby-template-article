@@ -1,0 +1,16 @@
+:global {
+  footer,
+  header,
+  main {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+  }
+
+  @include mw768 {
+    body,
+    html {
+      font-size: 15px;
+    }
+  }
+}
