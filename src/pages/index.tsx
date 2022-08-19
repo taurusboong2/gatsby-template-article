@@ -1,14 +1,16 @@
-import * as React from 'react';
-import type { HeadFC } from 'gatsby';
+import React from 'react';
+import ArticleList from '../components/ArticleList';
+import Pagination from '../components/Pagination';
+import Footer from '../components/Footer';
 
-export const Head: HeadFC = () => <title>Home Page</title>;
-
-const IndexPage = () => {
+const Home = () => {
   return (
-    <main>
-      <h1>Index page boong</h1>
-    </main>
+    <>
+      <ArticleList />
+      <Pagination />
+      <Footer />
+    </>
   );
 };
 
-export default IndexPage;
+export default Home;
