@@ -1,9 +1,13 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo, useEffect } from 'react';
+import { Link, navigate } from 'gatsby';
 import styles from './articleList.module.scss';
 import classnames from 'classnames/bind';
 import Pagination from '../Pagination';
 import ArticleItem from './ArticleItem';
 import { Article } from '../../types/articles';
+import { uniq, drop } from 'lodash';
+import qs from 'qs';
+import { useURLQuery } from '../../hooks/common.hook';
 
 const cx = classnames.bind(styles);
 
@@ -13,6 +17,38 @@ type Props = {
 
 const ArticleList: FC<Props> = props => {
   const { articles } = props;
+  const { page, pageSize, tag, ...restParams } = useURLQuery();
+  const parsedPage = page ? parseInt(page) : 1;
+  const parsedPageSize = pageSize ? parseInt(pageSize) : 10;
+
+  const pageCount = Math.ceil(articles.length / parsedPageSize);
+
+  useEffect(() => {
+    if (!page || !pageSize) {
+      const newSeachParams = qs.stringify({ tag, ...restParams, page: 1, pageSize: 10 }, { addQueryPrefix: true });
+      navigate(newSeachParams);
+    }
+  }, [page, pageSize]);
+
+  const allTags = useMemo(() => {
+    let tags: string[] = [];
+    articles.forEach(article => {
+      if (article.frontmatter.tags) {
+        tags = [...tags, ...article.frontmatter.tags];
+      }
+    });
+
+    return uniq(tags);
+  }, [articles]);
+
+  const currentPageArticles = useMemo(() => {
+    return drop(articles, parsedPage - 1).slice(0, parsedPageSize);
+  }, [articles, parsedPage, parsedPageSize]);
+
+  const setPage = (newPage: number) => {
+    const newSeachParams = qs.stringify({ tag, pageSize, ...restParams, page: newPage }, { addQueryPrefix: true });
+    navigate(newSeachParams);
+  };
 
   return (
     <>
@@ -27,34 +63,26 @@ const ArticleList: FC<Props> = props => {
           <div className={cx('slide-up')}>
             <section className={cx('blog-filter')}>
               <ul className={cx('blog-filter-list')}>
-                <a className={cx('filter-item')} href="">
-                  <span className={cx('filter-item-hash')}>#</span>hash1
-                </a>
-                <a className={cx('filter-item')} href="">
-                  <span className={cx('filter-item-hash')}>#</span>hash2
-                </a>
-                <a className={cx('filter-item')} href="">
-                  <span className={cx('filter-item-hash')}>#</span>hash3
-                </a>
-                <a className={cx('filter-item')} href="">
-                  <span className={cx('filter-item-hash')}>#</span>hash4
-                </a>
-                <a className={cx('filter-item')} href="">
-                  <span className={cx('filter-item-hash')}>#</span>hash5
-                </a>
+                {allTags.map(tag => {
+                  return (
+                    <Link to={`/tags/${tag}`} key={tag} className={cx('filter-item')}>
+                      {tag}
+                    </Link>
+                  );
+                })}
               </ul>
             </section>
           </div>
           <div className={cx('slide-up')}>
             <section className={cx('blog-post-list')}>
-              {articles.map(article => {
+              {currentPageArticles.map(article => {
                 return <ArticleItem key={article.frontmatter.slug} article={article} />;
               })}
             </section>
           </div>
         </div>
       </div>
-      <Pagination />
+      <Pagination currentPage={parsedPage} pageCount={pageCount} setPage={setPage} />
     </>
   );
 };
