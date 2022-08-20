@@ -1,0 +1,130 @@
+.post-wrap {
+  margin-top: 180px;
+  color: #212529;
+
+  .post-title,
+  .post-tag,
+  .post-description,
+  .post-explain {
+    @include detailTexts;
+  }
+
+  .post-tag {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.38px;
+    color: $mainColor;
+  }
+
+  .post-title {
+    margin-top: 24px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.32;
+    letter-spacing: -0.8px;
+  }
+
+  .post-description {
+    margin-top: 24px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .post-explain {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    color: #828c94;
+
+    > span {
+      display: block;
+      width: 1px;
+      height: 12px;
+      margin: 0 12px;
+      background-color: #dadce0;
+    }
+  }
+}
+
+.post-content {
+  width: 100%;
+  max-width: 1040px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 100px auto;
+  font-size: 18px;
+  line-height: 33px;
+  color: #212529;
+
+  > h1 {
+    font-size: 36px;
+
+    > strong {
+      font-weight: bold;
+    }
+  }
+
+  > p {
+    display: block;
+    margin: 15px 0;
+  }
+
+  > hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+  }
+}
+
+.author-wrap {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  .post-author {
+    display: flex;
+    box-sizing: border-box;
+    padding: 40px 24px;
+    margin: 0 auto 60px;
+    border-top: 1px solid #eaebef;
+    border-bottom: 1px solid #eaebef;
+
+    .author-image {
+      border-radius: 100%;
+      margin-right: 24px;
+      width: 64px;
+      height: 64px;
+    }
+
+    .author-explain {
+      flex: 1 0;
+      margin-top: 4px;
+      line-height: 24px;
+
+      .author {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.21px;
+        color: #212529;
+      }
+
+      .description {
+        margin-top: 12px;
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: -0.36px;
+        color: #212529;
+      }
+    }
+  }
+}
