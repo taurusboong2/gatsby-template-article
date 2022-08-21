@@ -3,6 +3,10 @@ slug: '/blog/my-second-post'
 date: '2022-08-02'
 title: 'My second😃'
 category: 'past'
+tags:
+  - 'BatMan'
+  - 'Iron Man'
+  - 'Hluk'
 description: 'this is my second blog post.'
 thumbnail: ./images/img2.jpeg
 writer: 'taurusboong2'

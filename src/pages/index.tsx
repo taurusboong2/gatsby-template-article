@@ -20,8 +20,8 @@ const Home = (props: Props) => {
 export default Home;
 
 export const pageQuery = graphql`
-  query {
-    articles: allMarkdownRemark {
+  {
+    articles: allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       nodes {
         html
         frontmatter {
