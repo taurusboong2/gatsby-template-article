@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
-import DetailContent from '@/components/DetailContent';
-import Footer from '@/components/Footer';
+import DetailContent from '../components/DetailContent';
+import Footer from '../components/Footer';
 import { Article } from '@/types/articles';
 
 type Props = PageProps<{ article: Article }>;

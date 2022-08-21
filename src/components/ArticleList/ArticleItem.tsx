@@ -29,7 +29,7 @@ const ArticleItem: FC<Props> = props => {
           <div className={cx('item-explain')}>
             <div>{article.frontmatter.date}</div>
             <span className={cx('explain-bar')} />
-            <div>by {article.frontmatter.writer}</div>
+            <div>by {article.frontmatter.author}</div>
           </div>
         </div>
         {thumbnail && (

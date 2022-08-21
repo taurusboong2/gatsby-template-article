@@ -31,11 +31,12 @@ export const pageQuery = graphql`
           tags
           description
           category
-          writer
-          thumbnail {
+          author
+          author_thumbnail {
             publicURL
             name
           }
+          author_description
         }
       }
     }

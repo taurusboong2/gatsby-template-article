@@ -30,15 +30,15 @@ const DetailContent: FC<Props> = props => {
         <div className={cx('post-explain')}>
           {article.frontmatter.date}
           <span />
-          by {article.frontmatter.writer}
+          by {article.frontmatter.author}
         </div>
       </div>
       <div className={cx('author-wrap')}>
         <div className={cx('post-author')}>
           {thumbnail && <img className={cx('author-image')} src={thumbnail.publicURL} alt={thumbnail.name} />}
           <div className={cx('author-explain')}>
-            <p className={cx('author')}>{article.frontmatter.writer}</p>
-            <p className={cx('description')}>발전하는 개발자 taurusboong2</p>
+            <p className={cx('author')}>{article.frontmatter.author}</p>
+            <p className={cx('description')}>{article.frontmatter.author_description}</p>
           </div>
         </div>
       </div>
