@@ -18,8 +18,8 @@ type Props = {
 const ArticleList: FC<Props> = props => {
   const { articles } = props;
   const { page, pageSize, tag, ...restParams } = useURLQuery();
-  const parsedPage = page ? parseInt(page) : 1;
-  const parsedPageSize = pageSize ? parseInt(pageSize) : 10;
+  const parsedPage = page ? parseInt(page as string) : 1;
+  const parsedPageSize = pageSize ? parseInt(pageSize as string) : 10;
 
   const pageCount = Math.ceil(articles.length / parsedPageSize);
 
@@ -46,8 +46,8 @@ const ArticleList: FC<Props> = props => {
   }, [articles, parsedPage, parsedPageSize]);
 
   const setPage = (newPage: number) => {
-    const newSeachParams = qs.stringify({ tag, pageSize, ...restParams, page: newPage }, { addQueryPrefix: true });
-    navigate(newSeachParams);
+    const newSearchParams = qs.stringify({ tag, pageSize, ...restParams, page: newPage }, { addQueryPrefix: true });
+    navigate(newSearchParams);
   };
 
   return (

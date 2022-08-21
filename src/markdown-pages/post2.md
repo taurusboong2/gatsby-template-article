@@ -6,7 +6,7 @@ category: 'past'
 tags:
   - 'BatMan'
   - 'Iron Man'
-  - 'Hluk'
+  - 'Hulk'
 description: 'this is my second blog post.'
 thumbnail: ./images/img2.jpeg
 writer: 'taurusboong2'
