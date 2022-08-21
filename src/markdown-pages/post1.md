@@ -8,7 +8,9 @@ tags:
   - 'ipsum'
 description: 'this is my first blog post.'
 thumbnail: ./images/img1.jpeg
-writer: 'taurusboong2'
+author: 'taurusboong2'
+author_thumbnail: ./images/img1.jpeg
+author_description: 'Hello World! I`m here'
 ---
 
 # My first blog post

@@ -9,7 +9,9 @@ tags:
   - 'HTML'
 description: 'this is my third blog post.'
 thumbnail: ./images/img3.jpeg
-writer: 'taurusboong2'
+author: 'taurusboong2'
+author_thumbnail: ./images/img3.jpeg
+author_description: 'Hello I`m gonna be a FE developer'
 ---
 
 # My second blog post

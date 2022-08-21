@@ -9,7 +9,9 @@ export type Article = {
     tags: string[] | null;
     description: string;
     category: string;
-    writer: string;
+    author: string;
+    author_description: string;
+    author_thumbnail?: Image;
     thumbnail?: Image;
   };
 };

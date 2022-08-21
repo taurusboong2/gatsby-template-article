@@ -9,7 +9,9 @@ tags:
   - 'Hulk'
 description: 'this is my second blog post.'
 thumbnail: ./images/img2.jpeg
-writer: 'taurusboong2'
+author: 'taurusboong2'
+author_thumbnail: ./images/img2.jpeg
+author_description: 'This is my description'
 ---
 
 # My second blog post
