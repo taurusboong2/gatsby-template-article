@@ -2,6 +2,10 @@
   Gatsby template article
 </h1>
 
+[Example](https://gatsby-template-article.vercel.app/)
+
+Gatsby template generating SSG with markdown files.
+
 ## Usage
 
 ### 1. Create a Gatsby site
