@@ -10,7 +10,7 @@ tags:
 description: 'this is my second blog post.'
 thumbnail: ./images/img2.jpeg
 author: 'taurusboong2'
-author_thumbnail: ./images/img2.jpeg
+author_thumbnail: ./images/taurus.png
 author_description: 'This is my description'
 ---
 

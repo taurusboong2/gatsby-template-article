@@ -9,7 +9,7 @@ tags:
 description: 'this is my first blog post.'
 thumbnail: ./images/img1.jpeg
 author: 'taurusboong2'
-author_thumbnail: ./images/img1.jpeg
+author_thumbnail: ./images/taurus.png
 author_description: 'Hello World! I`m here'
 ---
 

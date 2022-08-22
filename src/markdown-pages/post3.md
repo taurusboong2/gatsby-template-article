@@ -10,7 +10,7 @@ tags:
 description: 'this is my third blog post.'
 thumbnail: ./images/img3.jpeg
 author: 'taurusboong2'
-author_thumbnail: ./images/img3.jpeg
+author_thumbnail: ./images/taurus.png
 author_description: 'Hello I`m gonna be a FE developer'
 ---
 

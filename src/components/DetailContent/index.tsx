@@ -13,7 +13,7 @@ const DetailContent: FC<Props> = props => {
   const { article } = props;
 
   const tags = article.frontmatter.tags;
-  const thumbnail = article.frontmatter.thumbnail;
+  const author_thumbnail = article.frontmatter.author_thumbnail;
 
   return (
     <>
@@ -35,7 +35,9 @@ const DetailContent: FC<Props> = props => {
       </div>
       <div className={cx('author-wrap')}>
         <div className={cx('post-author')}>
-          {thumbnail && <img className={cx('author-image')} src={thumbnail.publicURL} alt={thumbnail.name} />}
+          {author_thumbnail && (
+            <img className={cx('author-image')} src={author_thumbnail.publicURL} alt={author_thumbnail.name} />
+          )}
           <div className={cx('author-explain')}>
             <p className={cx('author')}>{article.frontmatter.author}</p>
             <p className={cx('description')}>{article.frontmatter.author_description}</p>

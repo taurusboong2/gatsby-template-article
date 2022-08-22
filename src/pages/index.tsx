@@ -37,6 +37,10 @@ export const pageQuery = graphql`
             name
           }
           author_description
+          thumbnail {
+            publicURL
+            name
+          }
         }
       }
     }
