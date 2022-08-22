@@ -1,54 +1,32 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
   Gatsby template article
 </h1>
 
-## 🚀 Quick start
+## Usage
 
-1.  **Create a Gatsby site.**
+### 1. Create a Gatsby site
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+```sh
+# create a new Gatsby site using the starter
+npx gatsby new my-article-starter https://github.com/taurusboong2/gatsby-template-article
+```
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+> If you are not using `npx`, following [Gatsby Getting Started](https://www.gatsbyjs.org/docs/quick-start)
 
-2.  **Start developing.**
+```sh
+npm install -g gatsby-cli
+gatsby new my-article-starter https://github.com/taurusboong2/gatsby-template-article
+```
 
-    Navigate into your new site’s directory and start it up.
+### 2. Add your article
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+- put your contents in `src/markdown-pages` directory.
 
-3.  **Open the code and start customizing!**
+> With markdown syntax and some meta data
 
-    Your site is now running at http://localhost:8000!
+## Support
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+- Create article pages with markdown files
+- TypeScript
+- [reset.css](https://gist.github.com/DavidWells/18e73022e723037a50d6)
+- Eslint
